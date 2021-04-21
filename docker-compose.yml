@@ -8,6 +8,8 @@ services:
         environment: 
             - SECRET_KEY=django-insecure-+58@x2mb-5nt49xcx(8623v@=7x+-gx3za!^4t+(n4he)1cf3#
             - DEBUG=1
+            - STRIPE_TEST_PUBLISHABLE_KEY=pk_test_51IiL2tSAwb2vRd35LYQAp1k3a5HevPcooSi3oTDUn4A3paZVh5M7ZptHPN9nBZrFfwXnrFqNQ36WTl0JR0GpgfEL00XvDFZUO3
+            - STRIPE_TEST_SECRET_KEY=sk_test_51IiL2tSAwb2vRd35WdGdcPFf9Caf5s7pxlfpxjV9UizHOvMYIFrTJhkOqXIvdI1N4nAJ5H1UnCrQPvrcQFimUTvZ00Z2FA0lgN
         volumes:
             - .:/code
         ports:
@@ -18,8 +20,7 @@ services:
         image: postgres:11
         volumes:
             - postgres_data:/var/lib/postgresql/data/
-        environment: 
-            - "POSTGRES_HOST_AUTH_METHOD=trust"
+
 
 
 volumes:
